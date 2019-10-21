@@ -28,28 +28,28 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`jquerygen hello [FILE]`](#jquerygen-hello-file)
+* [`jquerygen create COMPONENTNAME`](#jquerygen-create-componentname)
 * [`jquerygen help [COMMAND]`](#jquerygen-help-command)
 
-## `jquerygen hello [FILE]`
+## `jquerygen create COMPONENTNAME`
 
-describe the command here
+Create file with boilerplate jQuery code ready to deal with the component logic
 
 ```
 USAGE
-  $ jquerygen hello [FILE]
+  $ jquerygen create COMPONENTNAME
+
+ARGUMENTS
+  COMPONENTNAME  Component file name (and class name, if class flag is added)
 
 OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
+  -c, --class  Create file as class structure, receiving the jQuery root object as the constructor parameter
 
 EXAMPLE
-  $ jquerygen hello
-  hello world from ./src/hello.ts!
+  $ jquerygen create mycomponent
 ```
 
-_See code: [src/commands/hello.ts](https://github.com/VictorHugoBatista/jquery-component-generator/blob/v0.0.0/src/commands/hello.ts)_
+_See code: [src/commands/create.ts](https://github.com/VictorHugoBatista/jquery-component-generator/blob/v0.0.0/src/commands/create.ts)_
 
 ## `jquerygen help [COMMAND]`
 
