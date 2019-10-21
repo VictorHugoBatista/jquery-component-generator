@@ -1,4 +1,4 @@
-import InputData from '../DTO/input-data'
+import ReplaceData from '../DTO/replace-data'
 const fs = require('fs')
 const path = require('path')
 
@@ -14,7 +14,7 @@ export default class SampleManager {
     this._sampleFileContent = fs.readFileSync(this._sampleFilePath, 'utf8')
   }
 
-  public replaceContent(dataToReplace: InputData): SampleManager {
+  public replaceContent(dataToReplace: ReplaceData): SampleManager {
     for (let [fileTerm, dataToWrite] of dataToReplace.getAll()) {
       const fileTermToReplace = fileTerm.toUpperCase()
       const replaceRegex = new RegExp(fileTermToReplace, 'g')
