@@ -8,9 +8,10 @@ export default class Create extends Command {
   ]
 
   static flags = {
-    class: flags.boolean({
-      char: 'c',
-      description: 'Create file as class structure, receiving the jQuery root object as the constructor parameter',
+    type: flags.string({
+      char: 't',
+      description: 'Type of component created. Items: object | class | mask. Default: object',
+      default: 'object',
     }),
   }
 
@@ -25,7 +26,7 @@ export default class Create extends Command {
   async run() {
     const {args, flags} = this.parse(Create)
 
-    this.log(`${flags.class}`)
+    this.log(`${flags.type}`)
     this.log(args.componentname)
   }
 }
