@@ -1,4 +1,8 @@
 export default class {
+  // Consider the elements and state objects to be declarated here.
+  // state = {}, // Store all important data to use without access the DOM directly.
+  // elements = {}, // Here is where all your important jQuery elements is stored.
+
   constructor($componentRoot) {
     if (this.initializeElements($componentRoot)) {
       // This is your secure area, where your important elements certainly
@@ -26,9 +30,9 @@ export default class {
    */
   initializeEvents() {
     this.$componentRoot.on('<EVENT>', event => {
-      // The arrow function let you use this for the current object but block you to get
-      // the event target using the classe $(this) statement. The solution is to use the
-      // currentTarget property of the event parameter as below.
+      // The arrow function let you use this for the current object properties and methods but
+      // block you to get the event target using the classe $(this) statement. The solution is
+      // to use the currentTarget property of the event parameter as below.
       const $this = $(event.currentTarget),
         something = $this.data('something');
 
