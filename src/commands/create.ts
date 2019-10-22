@@ -1,6 +1,12 @@
 import {Command, flags} from '@oclif/command'
 
 export default class Create extends Command {
+  static componentFiles = [
+    'object',
+    'class',
+    'mask',
+  ]
+
   static description = 'Create file with boilerplate jQuery code ready to deal with the component logic'
 
   static examples = [
@@ -10,8 +16,9 @@ export default class Create extends Command {
   static flags = {
     type: flags.string({
       char: 't',
-      description: 'Type of component created. Items: object | class | mask. Default: object',
+      description: 'Type of component created.',
       default: 'object',
+      options: Create.componentFiles,
     }),
   }
 
