@@ -1,4 +1,5 @@
 import {Command, flags} from '@oclif/command'
+import SampleManager from '../sample-manager/sample-manager'
 
 export default class Create extends Command {
   static componentFiles = [
@@ -32,8 +33,7 @@ export default class Create extends Command {
 
   async run() {
     const {args, flags} = this.parse(Create)
-
-    this.log(`${flags.type}`)
-    this.log(args.componentname)
+    const sample = new SampleManager(`${flags.type}.js`)
+    sample.save(`${args.componentname}.js`)
   }
 }
