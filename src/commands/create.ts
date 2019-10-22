@@ -1,5 +1,8 @@
 import {Command, flags} from '@oclif/command'
 
+import componentsFilenames from '../data/components-filenames'
+import SampleManager from '../sample-manager/sample-manager'
+
 export default class Create extends Command {
   static description = 'Create file with boilerplate jQuery code ready to deal with the component logic'
 
@@ -8,9 +11,12 @@ export default class Create extends Command {
   ]
 
   static flags = {
-    class: flags.boolean({
-      char: 'c',
-      description: 'Create file as class structure, receiving the jQuery root object as the constructor parameter',
+    type: flags.string({
+      char: 't',
+      description: 'Type of component created.',
+      default: 'object',
+      options: componentsFilenames,
+      required: true,
     }),
   }
 
@@ -24,8 +30,7 @@ export default class Create extends Command {
 
   async run() {
     const {args, flags} = this.parse(Create)
-
-    this.log(`${flags.class}`)
-    this.log(args.componentname)
+    const sample = new SampleManager(`${flags.type}.js`)
+    sample.save(`${args.componentname}.js`)
   }
 }
