@@ -1,4 +1,5 @@
 import {Command, flags} from '@oclif/command'
+
 import SampleManager from '../sample-manager/sample-manager'
 
 export default class Create extends Command {
@@ -20,6 +21,7 @@ export default class Create extends Command {
       description: 'Type of component created.',
       default: 'object',
       options: Create.componentFiles,
+      required: true,
     }),
   }
 
