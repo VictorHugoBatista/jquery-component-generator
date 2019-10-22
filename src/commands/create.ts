@@ -1,14 +1,9 @@
 import {Command, flags} from '@oclif/command'
 
+import componentsFilenames from '../data/components-filenames'
 import SampleManager from '../sample-manager/sample-manager'
 
 export default class Create extends Command {
-  static componentFiles = [
-    'object',
-    'class',
-    'mask',
-  ]
-
   static description = 'Create file with boilerplate jQuery code ready to deal with the component logic'
 
   static examples = [
@@ -20,7 +15,7 @@ export default class Create extends Command {
       char: 't',
       description: 'Type of component created.',
       default: 'object',
-      options: Create.componentFiles,
+      options: componentsFilenames,
       required: true,
     }),
   }
