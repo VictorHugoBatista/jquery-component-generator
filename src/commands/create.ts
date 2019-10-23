@@ -3,6 +3,8 @@ import {Command, flags} from '@oclif/command'
 import componentsFilenames from '../data/components-filenames'
 import SampleManager from '../sample-manager/sample-manager'
 
+const fs = require('fs')
+
 export default class Create extends Command {
   static description = 'Create file with boilerplate jQuery code ready to deal with the component logic'
 
@@ -31,6 +33,12 @@ export default class Create extends Command {
   async run() {
     const {args, flags} = this.parse(Create)
     const sample = new SampleManager(`${flags.type}.js`)
-    sample.save(`${args.componentname}.js`)
+    const fileNameToCreate = `${args.componentname}.js`
+    if (fs.existsSync(fileNameToCreate)) {
+      this.log(`One file with name "${fileNameToCreate}" already exists in current directory!
+Be sure you are in correct directory or choose another file name`)
+      return
+    }
+    sample.save(fileNameToCreate)
   }
 }
