@@ -1,3 +1,12 @@
+/**
+ * How to use:
+ * Import this file and call the initialize method inside the object:
+ * import yourObjectName as './<PATH-TO-FILE>/<FILENAME>.js';
+ * yourObjectName.initialize();
+ *
+ * /!\ Be sure you are calling initialize after your page be loaded, inside an $(() => {}), by example. /!\
+ */
+
 export default {
   /**
    * Store all important data to use without access the DOM directly.
