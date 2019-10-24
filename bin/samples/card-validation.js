@@ -1,9 +1,14 @@
+import 'jquery-validation';
 import cardValidator from 'card-validator';
 
 /**
  * Add credit card validation methods to jquery-validation plugin.
  * Requires the packages 'jquery-validation' (https://jqueryvalidation.org/) and
  * 'card-validator' (https://github.com/braintree/card-validator) to work.
+ *
+ * How to use:
+ * Just import this file as:
+ * import './<PATH-TO-FILE>/<FILENAME>.js';
  */
 
 $.validator.addMethod('credit-card-number', value => {

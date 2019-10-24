@@ -1,3 +1,12 @@
+/**
+ * How to use:
+ * Import this file and instantiate passing an jQuery object by parameter as:
+ * import YourClassName as './<PATH-TO-FILE>/<FILENAME>.js';
+ * new YourClassName($('<YOUR-COMPONENT-SELECTOR>'));
+ *
+ * /!\ Be sure you are instantiating the class after your page be loaded, inside an $(() => {}), by example. /!\
+ */
+
 export default class {
   // Just imagine the elements and state objects are declarated
   // here, because javascript still do not support this for classes.

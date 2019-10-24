@@ -1,6 +1,14 @@
 /**
  * Require the package 'jquery-mask-plugin' (https://igorescobar.github.io/jQuery-Mask-Plugin/) to work.
+ *
+ * How to use:
+ * Import this file and call the initialize method inside the object:
+ * import yourObjectName as './<PATH-TO-FILE>/<FILENAME>.js';
+ * yourObjectName.initialize();
+ *
+ * /!\ Be sure you are calling initialize after your page be loaded, inside an $(() => {}), by example. /!\
  */
+
 export default {
   /**
    * Object with the field wrapper selectors and masks for initialize.
