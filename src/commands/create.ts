@@ -1,9 +1,8 @@
+const fs = require('fs')
 import {Command, flags} from '@oclif/command'
 
 import componentsFilenames from '../data/components-filenames'
 import SampleManager from '../sample-manager/sample-manager'
-
-const fs = require('fs')
 
 export default class Create extends Command {
   static description = 'Create file with boilerplate jQuery code ready to deal with the component logic'

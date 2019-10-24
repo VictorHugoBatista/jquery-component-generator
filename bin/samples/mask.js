@@ -1,5 +1,5 @@
 /**
- * Require the package jquery-validation (https://jqueryvalidation.org/) to work.
+ * Require the package 'jquery-mask-plugin' (https://igorescobar.github.io/jQuery-Mask-Plugin/) to work.
  */
 export default {
   /**
