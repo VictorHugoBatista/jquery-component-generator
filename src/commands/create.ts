@@ -39,5 +39,6 @@ Be sure you are in correct directory or choose another file name`)
       return
     }
     sample.save(fileNameToCreate)
+    this.log(`File ${fileNameToCreate} created with success B-)`)
   }
 }
