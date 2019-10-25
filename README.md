@@ -43,7 +43,7 @@ ARGUMENTS
   COMPONENTNAME  Component file name (and class name, if class flag is added)
 
 OPTIONS
-  -c, --class  Create file as class structure, receiving the jQuery root object as the constructor parameter
+  -t, --type=object|class|mask|card-validation  (required) [default: object] Type of component created.
 
 EXAMPLE
   $ jquerygen create mycomponent
