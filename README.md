@@ -19,7 +19,7 @@ $ npm install -g jquery-component-generator
 $ jquerygen COMMAND
 running command...
 $ jquerygen (-v|--version|version)
-jquery-component-generator/0.0.0 linux-x64 node-v10.16.0
+jquery-component-generator/1.0.0 linux-x64 node-v10.16.0
 $ jquerygen --help [COMMAND]
 USAGE
   $ jquerygen COMMAND
@@ -49,7 +49,7 @@ EXAMPLE
   $ jquerygen create mycomponent
 ```
 
-_See code: [src/commands/create.ts](https://github.com/VictorHugoBatista/jquery-component-generator/blob/v0.0.0/src/commands/create.ts)_
+_See code: [src/commands/create.ts](https://github.com/VictorHugoBatista/jquery-component-generator/blob/v1.0.0/src/commands/create.ts)_
 
 ## `jquerygen help [COMMAND]`
 
